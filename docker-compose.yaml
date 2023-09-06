@@ -1,0 +1,12 @@
+version: '3'
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: angular-app
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./ng-apps/my-first-app:/app
+    #command: "ng serve --host 0.0.0.0 --port 4200 --poll 500 --watch"
